@@ -1,0 +1,25 @@
+#project {
+    h1 {
+        margin: 0;
+        margin-bottom: 5px;
+    }
+}
+
+.row {
+    margin: 10px auto;
+    &::after {
+        content:".";
+        display:block;
+        height:0;
+        visibility:hidden;
+        clear:both;
+}
+}
+
+@for $i from 1 to 12 {
+    .col-#{$i} {
+        float: left;
+        width: $i / 12 * 100%;
+        margin: 10px 0;
+    }
+}
