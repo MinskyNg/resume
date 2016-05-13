@@ -30,6 +30,8 @@
                 if (index == 4) {
                     loadedSection.find('h1').removeClass('hidden').addClass('animated flipInX');
                     loadedSection.find('img').removeClass('hidden').addClass('animated zoomIn');
+                    loadedSection.find('h2').removeClass('hidden').addClass('animated fadeDown');
+                    loadedSection.find('p').removeClass('hidden').addClass('animated fadeInUp');
                 }
 
                 if (index == 5) {
