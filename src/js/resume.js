@@ -1,6 +1,6 @@
 (function($) {
     $(document).ready(function() {
-        $('#loading').remove();
+        $('#loading').fadeOut();
         $('#container').fullpage({
             navigation: true,
             navigationTooltips: ['自我介绍', '前端基础', '其他技能', '练习作品', '联系方式'],
