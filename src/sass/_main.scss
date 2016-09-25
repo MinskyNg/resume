@@ -1,0 +1,154 @@
+.main {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 1160px;
+    height: 620px;
+    margin-top: -310px;
+    margin-left: -580px;
+    background: #FFF;
+    h3 {
+        margin-top: 40px;
+        font-size: 18px;
+    }
+    h4 {
+        font-size: 16px;
+    }
+    p {
+        font-family: simsun sans-serif;
+        font-size: 16px;
+    }
+}
+
+.about {
+    position: absolute;
+    width: 440px;
+    height: 620px;
+    padding: 10px;
+    padding-left: 45px;
+    background: #FFF;
+    box-shadow: 10px 0px 7px #ECECEC;
+    z-index: 9;
+    .avatar {
+        display: block;
+        width: 150px;
+        height: 150px;
+        border: 1px solid black;
+        border-radius: 50%;
+        margin: 5px auto;
+    }
+    h2 {
+        margin-bottom: -10px;
+        font-size: 22px;
+        text-align: center;
+    }
+    h3 {
+        margin-top: 25px;
+        margin-bottom: 15px;
+    }
+    h4 {
+        text-align: center;
+    }
+    p {
+        display: inline-block;
+        vertical-align: middle;
+    }
+    a {
+        text-decoration: none;
+        color: black;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+    .concat-info {
+        margin-top: -15px;
+        span {
+            display: inline-block;
+            width: 25px;
+            height: 25px;
+            margin-right: 18px;
+            background-repeat: no-repeat;
+            vertical-align: middle;
+        }
+        .phone {
+            background-image: url("../img/phone.png");
+        }
+        .email {
+            background-image: url("../img/email.png");
+        }
+        .gmail {
+            background-image: url("../img/gmail.png");
+        }
+    }
+    .social {
+        height: 50px;
+        margin: 20px 10px 0 20px;
+        a {
+            display: inline-block;
+            width: 49px;
+            height: 48px;
+            margin: 0 15px;
+            text-decoration: none;
+            background-repeat: no-repeat;
+            vertical-align: middle;
+        }
+        .github {
+            background-image: url("../img/github.png");
+        }
+        .wechat {
+            background-image: url("../img/wechat.png");
+        }
+        .douban {
+            background-image: url("../img/douban.png");
+        }
+    }
+}
+
+.skill {
+    position: absolute;
+    left: 360px;
+    width: 440px;
+    height: 620px;
+    padding: 10px 15px 10px 45px;
+    background: #FFF;
+    box-shadow: 10px 0px 7px #ECECEC, -10px 0px 7px #ECECEC;
+    z-index: 7;
+    &:hover {
+        z-index: 10;
+    }
+}
+
+.project {
+    position: absolute;
+    left: 720px;
+    width: 440px;
+    height: 620px;
+    padding: 10px 15px 10px 45px;
+    background: #FFF;
+    box-shadow: -10px 0px 7px #ECECEC;
+    z-index: 5;
+    &:hover {
+        z-index: 10;
+    }
+    &:after{
+        content:"";
+        display: block;
+        position: absolute;
+        right:0;
+        bottom: 0;
+        border: 14px solid;
+        border-color:#E8E8E8 #3EC5B9 #3EC5B9 #E8E8E8;
+        box-shadow: 0px 5px 1px #3EC5B9;
+    }
+    .project-detail {
+        width: 380px;
+        height: 80px;
+        border: 1px solid black;
+    }
+    .downPdf {
+        display: block;
+        width: 87px;
+        height: 40px;
+        margin: 40px auto 0;
+    }
+}

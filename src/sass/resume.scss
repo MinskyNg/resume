@@ -1,9 +1,29 @@
 @import "global";
 @import "loading";
-@import "about";
-@import "skill";
-@import "other";
-@import "project";
-@import "contact";
-@import "animate";
-// @import "_responsive.scss";
+@import "main";
+
+.triangle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    border: 167px solid;
+    border-color: #FFD646 transparent transparent #FFD646;
+    z-index: 999;
+}
+
+#addWechat {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 320px;
+    height: 320px;
+    margin-top: -160px;
+    margin-left: -160px;
+    z-index: 999;
+    &:hover {
+        cursor: pointer;
+    }
+}
