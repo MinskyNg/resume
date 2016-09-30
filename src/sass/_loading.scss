@@ -1,4 +1,5 @@
 .loading {
+    display: none;
     position:fixed;
     width:100%;
     height:100%;
@@ -13,16 +14,18 @@
     top: 180px;
     left: 50%;
     width: 250px;
-    height: 280px;
+    height: 285px;
     margin-left: -125px;
     border-radius: 30px;
     background: #FFF;
     animation: leaveUp 3.5s linear;
     animation-fill-mode: forwards;
     h1 {
+        margin-bottom: 20px;
         text-align: center;
         letter-spacing: 4px;
-        font-size: 38px;
+        font-family: cursive;
+        font-size: 40px;
         color: #D53C2F;
     }
     .line {

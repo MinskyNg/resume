@@ -1,11 +1,47 @@
-//弹出微信二维码
+var addWechat = document.getElementById('addWechat');
+var close = document.getElementById('close');
+var downPdf = document.getElementById('downPdf');
+
+
 function showAddWechat(){
-    document.getElementById('addWechat').style.display='block';
+    addWechat.style.display = 'block';
+    setTimeout('addWechat.style.opacity = 1;', 100);
+    document.addEventListener('click', closeAddWechat);
 }
 
-//关闭微信二维码
 function closeAddWechat(){
-    this.style.display='none';
+    addWechat.style.opacity = 0;
+    setTimeout('addWechat.style.display = "none";', 300);
+    document.removeEventListener('click', closeAddWechat);
 }
 
-document.getElementById('addWechat').onclick = closeAddWechat;
+addWechat.onmouseover = function() {
+    close.style.opacity = 1;
+};
+
+addWechat.onmouseout = function() {
+    close.style.opacity = 0;
+};
+
+function downLoadPdf() {
+    var downUrl = document.createElement("a");
+    document.body.appendChild(downUrl);
+    downUrl.target = '_blank';
+    downUrl.href = '/前端实习-吴佳立.pdf';
+    downUrl.click();
+    document.body.removeChild(downUrl);
+}
+
+downPdf.onclick = function() {
+    downPdf.style.width = '50px';
+    downPdf.style.height = '50px';
+    downPdf.style.background = '#2BCB96';
+    downPdf.innerHTML = '<span class="tick"></span>';
+    downPdf.style.borderRadius = '50%';
+    downPdf.style.marginLeft = '147px';
+    setTimeout(downLoadPdf, 800);
+    downPdf.onclick = function() {
+        downLoadPdf();
+    }
+}
+

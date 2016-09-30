@@ -2,6 +2,7 @@
 @import "loading";
 @import "main";
 
+
 .triangle {
     position: absolute;
     top: 0;
@@ -22,8 +23,24 @@
     height: 320px;
     margin-top: -160px;
     margin-left: -160px;
+    opacity: 0;
     z-index: 999;
-    &:hover {
-        cursor: pointer;
+    transition: opacity 0.6s;
+    #close {
+        display: block;
+        position: absolute;
+        top: 5px;
+        left: 5px;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background-image: url("../img/close.png");
+        background-repeat: no-repeat;
+        background-color: rgba(255, 255, 255, 0.9);
+        opacity: 0;
+        transition: opacity 0.5s;
+        &:hover {
+            cursor: pointer;
+        }
     }
 }
