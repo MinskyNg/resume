@@ -23,30 +23,27 @@
     position: absolute;
     width: 440px;
     height: 620px;
-    padding: 10px;
-    padding-left: 45px;
+    padding: 10px 15px 10px 45px;
     background: #FFF;
-    box-shadow: 10px 0px 7px #ECECEC;
+    box-shadow: 10px 3px 8px #EEE;
     z-index: 9;
     .avatar {
         display: block;
         width: 150px;
         height: 150px;
-        border: 1px solid black;
+        margin: 20px auto 0;
+        border: 1px solid #000;
         border-radius: 50%;
-        margin: 5px auto;
     }
     h2 {
-        margin-bottom: -10px;
+        margin-top: 20px;
+        margin-bottom: 20px;
         font-size: 22px;
         text-align: center;
     }
     h3 {
-        margin-top: 25px;
-        margin-bottom: 15px;
-    }
-    h4 {
-        text-align: center;
+        margin-top: 20px;
+        margin-bottom: 20px;
     }
     p {
         display: inline-block;
@@ -81,7 +78,7 @@
     }
     .social {
         height: 50px;
-        margin: 7px 0 0 40px;
+        margin: 20px 0 0 40px;
         a {
             display: inline-block;
             width: 49px;
@@ -91,57 +88,27 @@
             text-decoration: none;
             background-repeat: no-repeat;
             vertical-align: middle;
+            opacity: 1;
+            transition: opacity .3s linear;
         }
         .github {
             background-image: url("../img/github.png");
             &:hover {
-                filter: drop-shadow(1px 1px 1px #A3A3A3);
+                opacity: .7;
             }
         }
         .leetcode {
             border: 1px solid #F9F9F9;
             background-image: url("../img/leetcode.png");
             &:hover {
-                filter: drop-shadow(1px 1px 1px #F0F0F0);
+                opacity: .8;
             }
         }
         .wechat {
             background-image: url("../img/wechat.png");
             &:hover {
-                filter: drop-shadow(1px 1px 1px #77A51F);
+                opacity: .8;
             }
-        }
-    }
-    #downPdf {
-        display: block;
-        position: relative;
-        width: 144px;
-        height: 46px;
-        margin: 25px 0 0 105px;
-        border: 2px solid #2BCB96;
-        border-radius: 20px;
-        color: #2BCB96;
-        font-size: 15px;
-        text-align: center;
-        line-height: 42px;
-        background: transparent;
-        cursor: pointer;
-        transition: all 0.5s;
-        &:hover {
-            color: #FFF;
-            background: #2BCB96;
-        }
-        .tick {
-            display: block;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 30px;
-            height: 22px;
-            margin-top: -11px;
-            margin-left: -15px;
-            background-repeat: no-repeat;
-            background-image: url("../img/tick.png");
         }
     }
 }
@@ -153,7 +120,7 @@
     height: 620px;
     padding: 10px 15px 10px 45px;
     background: #FFF;
-    box-shadow: 10px 0px 7px #ECECEC, -10px 0px 7px #ECECEC;
+    box-shadow: 10px 3px 8px #EEE, -10px 3px 8px #EEE;
     z-index: 7;
     &:hover {
         z-index: 10;
@@ -167,7 +134,7 @@
     height: 620px;
     padding: 10px 15px 10px 45px;
     background: #FFF;
-    box-shadow: -10px 0px 7px #ECECEC;
+    box-shadow: -10px 3px 8px #EEE;
     z-index: 5;
     &:hover {
         z-index: 10;
@@ -179,31 +146,46 @@
         right:0;
         bottom: 0;
         border: 14px solid;
-        border-color:#E8E8E8 #3EC5B9 #3EC5B9 #E8E8E8;
-        box-shadow: 0px 5px 1px #3EC5B9;
-    }
-    h4 {
-        font-size: 16px;
-        margin-bottom: 1px;
-        a {
-            color: #000;
-            text-decoration: none;
-            &:hover {
-                color: #999;
-            }
-        }
+        border-color:#E8E8E8 #F5F5F5 #F5F5F5 #E8E8E8;
+        box-shadow: -4px 0px 1px #F5F5F5, 0px 5px 1px #F5F5F5;
     }
     .project-detail {
         width: 380px;
-        height: 90px;
-        padding-top: 10px;
-        padding-bottom: 16px;
-        a {
-            display: block;
+        height: 64px;
+        margin: 24px 0 32px;
+        h4 {
             float: left;
             width: 64px;
             height: 64px;
+            margin: 0;
             margin-left: -5px;
+            background-repeat: no-repeat;
+            a {
+                display: block;
+                width: 64px;
+                height: 64px;
+                color: #333;
+                font-size: 16px;
+                text-decoration: none;
+                text-align: center;
+                line-height: 64px;
+                background-color: #FFF;
+                opacity: 0;
+                transition: opacity .4s linear;
+                &:hover {
+                    opacity: .6;
+                }
+            }
+        }
+        .diary {
+            background-image: url(../img/diary.png);
+        }
+        .chat {
+            background-image: url(../img/chat.png);
+        }
+        .demo {
+            background-image: url(../img/demo.png);
+            margin-bottom: 40px;
         }
         p {
             margin-top: 0px;
@@ -220,6 +202,39 @@
                     color: #666;
                 }
             }
+        }
+    }
+
+    #downPdf {
+        display: block;
+        position: relative;
+        width: 150px;
+        height: 50px;
+        margin: 50px auto 0;
+        border: 2px solid #656D78;
+        border-radius: 20px;
+        color: #656D78;
+        font-size: 15px;
+        text-align: center;
+        line-height: 48px;
+        background: transparent;
+        cursor: pointer;
+        transition: all .5s linear;
+        &:hover {
+            color: #FFF;
+            background: #656D78;
+            transform: scale(1.08);
+        }
+        .tick {
+            display: block;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 30px;
+            height: 22px;
+            margin-top: -11px;
+            margin-left: -15px;
+            background: url("../img/tick.png") no-repeat center;
         }
     }
 }

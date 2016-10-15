@@ -1,0 +1,262 @@
+.loading {
+    position:fixed;
+    width:100%;
+    height:100%;
+    background: #F5F5F5;
+    z-index: 99;
+    visibility: visible;
+    opacity: 1;
+    animation: fadeOut 1s linear 4.5s;
+    animation-fill-mode: forwards;
+}
+
+.paper {
+    position: absolute;
+    top: 188px;
+    left: 50%;
+    width: 240px;
+    height: 320px;
+    margin-left: -120px;
+    border-radius: 25px;
+    background: #FFF;
+    z-index: 7;
+    animation: showUp 5s linear;
+    animation-fill-mode: forwards;
+    h1 {
+        margin-bottom: 16px;
+        text-align: center;
+        letter-spacing: 4px;
+        font-family: cursive;
+        font-size: 36px;
+        color: #222;
+    }
+    .line {
+        height: 11px;
+        width: 210px;
+        margin: 16px auto;
+        background: #D4DAE3;
+        &:last-child {
+            width: 110px;
+            margin: 16px 20px;
+        }
+    }
+}
+
+.panel {
+    position: absolute;
+    top: 308px;
+    left: 50%;
+    width: 270px;
+    height: 62px;
+    margin-left: -135px;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+    background: #C4CAD3;
+    z-index: 8;
+    opacity: 1;
+    animation: fade .5s linear 2.5s;
+    animation-fill-mode: forwards;
+}
+
+.box {
+    position: absolute;
+    top: 366px;
+    left: 50%;
+    width: 440px;
+    height: 170px;
+    margin-left: -220px;
+    border-radius: 50px;
+    background: #959DA8;
+    z-index: 29;
+    opacity: 1;
+    animation: circleFade 1.5s linear 2.5s;
+    animation-fill-mode: forwards;
+}
+
+.circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 88px;
+    height: 88px;
+    margin-top: -44px;
+    margin-left: -44px;
+    border-radius: 50%;
+    background: #FFF;
+    opacity: 1;
+    animation: rotate 4s linear;
+    animation-fill-mode: forwards;
+}
+
+.cross-y {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 10px;
+    height: 60px;
+    margin-top: -30px;
+    margin-left: -5px;
+    border-radius: 3px;
+    background: #656D78;
+}
+
+.cross-x {
+    width: 60px;
+    height: 10px;
+    margin: 40px auto;
+    border-radius: 3px;
+    background: #656D78;
+}
+
+.base {
+    position: absolute;
+    top: 544px;
+    left: 50%;
+    width: 370px;
+    height: 24px;
+    margin-left: -185px;
+    border-radius: 16px;
+    background: #757D88;
+    z-index: 9;
+    opacity: 1;
+    animation: fade .5s linear 2.5s;
+    animation-fill-mode: forwards;
+}
+
+.anchor1, .anchor2 {
+    position: absolute;
+    top: 564px;
+    left: 50%;
+    width: 110px;
+    height: 14px;
+    margin-left: -165px;
+    border-radius: 8px;
+    background: #757D88;
+    z-index: 9;
+    opacity: 1;
+    animation: fade .5s linear 2.5s;
+    animation-fill-mode: forwards;
+}
+
+.anchor2 {
+    margin-left: 55px;
+}
+
+
+@keyframes showUp {
+    0% {
+        top: 188px;
+        transform: scale(1);
+    }
+
+    12%, 16% {
+        top: 162px;
+        transform: scale(1);
+    }
+
+    28%, 32% {
+        top: 124px;
+        transform: scale(1);
+    }
+
+    44%, 48% {
+        top: 90px;
+        transform: scale(1);
+    }
+
+    60%, 64% {
+        top: 40px;
+        transform: scale(1);
+    }
+
+    80% {
+        top: 70px;
+        transform: scale(1);
+    }
+
+    100% {
+        top: 180px;
+        transform: scale(1.4);
+    }
+}
+
+@keyframes rotate {
+    0% {
+        opacity: 1;
+        transform: rotate(0deg) scale(1);
+    }
+
+    15%, 20% {
+        opacity: 1;
+        transform: rotate(45deg) scale(1);
+    }
+
+    35%, 40% {
+        opacity: 1;
+        transform: rotate(115deg) scale(1);
+    }
+
+    55%, 60% {
+        opacity: 1;
+        transform: rotate(215deg) scale(1);
+    }
+
+    75%, 80% {
+        opacity: 1;
+        transform: rotate(360deg) scale(1);
+    }
+
+    100% {
+        opacity: 0;
+        transform: rotate(360deg) scale(0);
+    }
+}
+
+@keyframes circleFade {
+    0% {
+        width: 440px;
+        margin-left: -220px;
+        border-radius: 50px;
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    40% {
+        width: 170px;
+        margin-left: -85px;
+        border-radius: 50%;
+        opacity: 1;
+        transform: scale(1);
+    }
+
+
+    100% {
+        width: 170px;
+        margin-left: -85px;
+        border-radius: 50%;
+        opacity: 0;
+        transform: scale(0);
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        visibility: visible;
+        opacity: 1;
+        z-index: 99;
+    }
+    to {
+        visibility: hidden;
+        opacity: 0;
+        z-index: -1;
+    }
+}

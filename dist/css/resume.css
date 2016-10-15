@@ -3,57 +3,74 @@
 
 body {
   font-family: 'Microsoft Yahei', Helvetica, Arial, sans-serif;
-  background-color: #3EC5B9; }
+  background-color: #F5F5F5; }
 
 .loading {
-  display: none;
   position: fixed;
   width: 100%;
   height: 100%;
-  background: #3EC5B9;
+  background: #F5F5F5;
   z-index: 99;
-  animation: fadeIn 1s linear 4s;
+  visibility: visible;
+  opacity: 1;
+  animation: fadeOut 1s linear 4.5s;
   animation-fill-mode: forwards; }
 
 .paper {
   position: absolute;
-  top: 180px;
+  top: 188px;
   left: 50%;
-  width: 250px;
-  height: 285px;
-  margin-left: -125px;
-  border-radius: 30px;
+  width: 240px;
+  height: 320px;
+  margin-left: -120px;
+  border-radius: 25px;
   background: #FFF;
-  animation: leaveUp 3.5s linear;
+  z-index: 7;
+  animation: showUp 5s linear;
   animation-fill-mode: forwards; }
   .paper h1 {
-    margin-bottom: 20px;
+    margin-bottom: 16px;
     text-align: center;
     letter-spacing: 4px;
     font-family: cursive;
-    font-size: 40px;
-    color: #D53C2F; }
+    font-size: 36px;
+    color: #222; }
   .paper .line {
-    height: 13px;
+    height: 11px;
     width: 210px;
     margin: 16px auto;
-    background: #8CCDD9; }
+    background: #D4DAE3; }
     .paper .line:last-child {
       width: 110px;
       margin: 16px 20px; }
 
+.panel {
+  position: absolute;
+  top: 308px;
+  left: 50%;
+  width: 270px;
+  height: 62px;
+  margin-left: -135px;
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+  background: #C4CAD3;
+  z-index: 8;
+  opacity: 1;
+  animation: fade .5s linear 2.5s;
+  animation-fill-mode: forwards; }
+
 .box {
   position: absolute;
-  top: 340px;
+  top: 366px;
   left: 50%;
-  width: 280px;
-  height: 140px;
-  margin-left: -140px;
-  border-bottom-right-radius: 50px;
-  border-bottom-left-radius: 50px;
-  background: #FFD646;
-  z-index: 9;
-  animation: circleFade 2s linear 2s;
+  width: 440px;
+  height: 170px;
+  margin-left: -220px;
+  border-radius: 50px;
+  background: #959DA8;
+  z-index: 29;
+  opacity: 1;
+  animation: circleFade 1.5s linear 2.5s;
   animation-fill-mode: forwards; }
 
 .circle {
@@ -66,7 +83,8 @@ body {
   margin-left: -44px;
   border-radius: 50%;
   background: #FFF;
-  animation: rotate 3.5s linear;
+  opacity: 1;
+  animation: rotate 4s linear;
   animation-fill-mode: forwards; }
 
 .cross-y {
@@ -78,76 +96,122 @@ body {
   margin-top: -30px;
   margin-left: -5px;
   border-radius: 3px;
-  background: #D33E35; }
+  background: #656D78; }
 
 .cross-x {
   width: 60px;
   height: 10px;
   margin: 40px auto;
   border-radius: 3px;
-  background: #D33E35; }
+  background: #656D78; }
 
-@keyframes leaveUp {
+.base {
+  position: absolute;
+  top: 544px;
+  left: 50%;
+  width: 370px;
+  height: 24px;
+  margin-left: -185px;
+  border-radius: 16px;
+  background: #757D88;
+  z-index: 9;
+  opacity: 1;
+  animation: fade .5s linear 2.5s;
+  animation-fill-mode: forwards; }
+
+.anchor1, .anchor2 {
+  position: absolute;
+  top: 564px;
+  left: 50%;
+  width: 110px;
+  height: 14px;
+  margin-left: -165px;
+  border-radius: 8px;
+  background: #757D88;
+  z-index: 9;
+  opacity: 1;
+  animation: fade .5s linear 2.5s;
+  animation-fill-mode: forwards; }
+
+.anchor2 {
+  margin-left: 55px; }
+
+@keyframes showUp {
   0% {
-    top: 180px; }
-  15%, 20% {
-    top: 150px; }
-  30%, 35% {
-    top: 120px; }
-  45%, 50% {
-    top: 90px; }
-  55%, 60% {
-    top: 60px; }
+    top: 188px;
+    transform: scale(1); }
+  12%, 16% {
+    top: 162px;
+    transform: scale(1); }
+  28%, 32% {
+    top: 124px;
+    transform: scale(1); }
+  44%, 48% {
+    top: 90px;
+    transform: scale(1); }
+  60%, 64% {
+    top: 40px;
+    transform: scale(1); }
+  80% {
+    top: 70px;
+    transform: scale(1); }
   100% {
-    top: -100%; } }
+    top: 180px;
+    transform: scale(1.4); } }
 
 @keyframes rotate {
   0% {
-    transform: rotate(0deg) scale(1, 1); }
+    opacity: 1;
+    transform: rotate(0deg) scale(1); }
   15%, 20% {
-    transform: rotate(45deg) scale(1, 1); }
-  30%, 35% {
-    transform: rotate(90deg) scale(1, 1); }
-  45%, 50% {
-    transform: rotate(180deg) scale(1, 1); }
+    opacity: 1;
+    transform: rotate(45deg) scale(1); }
+  35%, 40% {
+    opacity: 1;
+    transform: rotate(115deg) scale(1); }
   55%, 60% {
-    transform: rotate(225deg) scale(0, 0); }
+    opacity: 1;
+    transform: rotate(215deg) scale(1); }
+  75%, 80% {
+    opacity: 1;
+    transform: rotate(360deg) scale(1); }
   100% {
-    transform: rotate(360deg) scale(0, 0); } }
+    opacity: 0;
+    transform: rotate(360deg) scale(0); } }
 
 @keyframes circleFade {
   0% {
-    top: 340px;
-    height: 140px;
-    border-bottom-right-radius: 50px;
-    border-bottom-left-radius: 50px;
-    transform: rotate(0deg) scale(1, 1); }
-  30% {
-    top: 200px;
-    height: 280px;
+    width: 440px;
+    margin-left: -220px;
     border-radius: 50px;
-    transform: rotate(0deg) scale(1, 1); }
-  65%, 70% {
-    top: 200px;
-    height: 280px;
-    border-radius: 50px;
-    transform: rotate(45deg) scale(1, 1); }
-  80% {
-    top: 200px;
-    height: 280px;
+    opacity: 1;
+    transform: scale(1); }
+  40% {
+    width: 170px;
+    margin-left: -85px;
     border-radius: 50%;
-    transform: rotate(45deg) scale(1, 1); }
+    opacity: 1;
+    transform: scale(1); }
   100% {
-    top: 200px;
-    height: 280px;
+    width: 170px;
+    margin-left: -85px;
     border-radius: 50%;
-    transform: rotate(45deg) scale(0, 0); } }
+    opacity: 0;
+    transform: scale(0); } }
 
-@keyframes fadeIn {
+@keyframes fade {
   from {
+    opacity: 1; }
+  to {
+    opacity: 0; } }
+
+@keyframes fadeOut {
+  from {
+    visibility: visible;
     opacity: 1;
     z-index: 99; }
   to {
+    visibility: hidden;
     opacity: 0;
     z-index: -1; } }
 
@@ -173,27 +237,25 @@ body {
   position: absolute;
   width: 440px;
   height: 620px;
-  padding: 10px;
-  padding-left: 45px;
+  padding: 10px 15px 10px 45px;
   background: #FFF;
-  box-shadow: 10px 0px 7px #ECECEC;
+  box-shadow: 10px 3px 8px #EEE;
   z-index: 9; }
   .about .avatar {
     display: block;
     width: 150px;
     height: 150px;
-    border: 1px solid black;
-    border-radius: 50%;
-    margin: 5px auto; }
+    margin: 20px auto 0;
+    border: 1px solid #000;
+    border-radius: 50%; }
   .about h2 {
-    margin-bottom: -10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
     font-size: 22px;
     text-align: center; }
   .about h3 {
-    margin-top: 25px;
-    margin-bottom: 15px; }
-  .about h4 {
-    text-align: center; }
+    margin-top: 20px;
+    margin-bottom: 20px; }
   .about p {
     display: inline-block;
     vertical-align: middle; }
@@ -219,7 +281,7 @@ body {
       background-image: url("../img/gmail.png"); }
   .about .social {
     height: 50px;
-    margin: 7px 0 0 40px; }
+    margin: 20px 0 0 40px; }
     .about .social a {
       display: inline-block;
       width: 49px;
@@ -228,52 +290,22 @@ body {
       border-radius: 50%;
       text-decoration: none;
       background-repeat: no-repeat;
-      vertical-align: middle; }
+      vertical-align: middle;
+      opacity: 1;
+      transition: opacity .3s linear; }
     .about .social .github {
       background-image: url("../img/github.png"); }
       .about .social .github:hover {
-        -webkit-filter: drop-shadow(1px 1px 1px #A3A3A3);
-        filter: drop-shadow(1px 1px 1px #A3A3A3); }
+        opacity: .7; }
     .about .social .leetcode {
       border: 1px solid #F9F9F9;
       background-image: url("../img/leetcode.png"); }
       .about .social .leetcode:hover {
-        -webkit-filter: drop-shadow(1px 1px 1px #F0F0F0);
-        filter: drop-shadow(1px 1px 1px #F0F0F0); }
+        opacity: .8; }
     .about .social .wechat {
       background-image: url("../img/wechat.png"); }
       .about .social .wechat:hover {
-        -webkit-filter: drop-shadow(1px 1px 1px #77A51F);
-        filter: drop-shadow(1px 1px 1px #77A51F); }
-  .about #downPdf {
-    display: block;
-    position: relative;
-    width: 144px;
-    height: 46px;
-    margin: 25px 0 0 105px;
-    border: 2px solid #2BCB96;
-    border-radius: 20px;
-    color: #2BCB96;
-    font-size: 15px;
-    text-align: center;
-    line-height: 42px;
-    background: transparent;
-    cursor: pointer;
-    transition: all 0.5s; }
-    .about #downPdf:hover {
-      color: #FFF;
-      background: #2BCB96; }
-    .about #downPdf .tick {
-      display: block;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      width: 30px;
-      height: 22px;
-      margin-top: -11px;
-      margin-left: -15px;
-      background-repeat: no-repeat;
-      background-image: url("../img/tick.png"); }
+        opacity: .8; }
 
 .skill {
   position: absolute;
@@ -282,7 +314,7 @@ body {
   height: 620px;
   padding: 10px 15px 10px 45px;
   background: #FFF;
-  box-shadow: 10px 0px 7px #ECECEC, -10px 0px 7px #ECECEC;
+  box-shadow: 10px 3px 8px #EEE, -10px 3px 8px #EEE;
   z-index: 7; }
   .skill:hover {
     z-index: 10; }
@@ -294,7 +326,7 @@ body {
   height: 620px;
   padding: 10px 15px 10px 45px;
   background: #FFF;
-  box-shadow: -10px 0px 7px #ECECEC;
+  box-shadow: -10px 3px 8px #EEE;
   z-index: 5; }
   .project:hover {
     z-index: 10; }
@@ -305,27 +337,40 @@ body {
     right: 0;
     bottom: 0;
     border: 14px solid;
-    border-color: #E8E8E8 #3EC5B9 #3EC5B9 #E8E8E8;
-    box-shadow: 0px 5px 1px #3EC5B9; }
-  .project h4 {
-    font-size: 16px;
-    margin-bottom: 1px; }
-    .project h4 a {
-      color: #000;
-      text-decoration: none; }
-      .project h4 a:hover {
-        color: #999; }
+    border-color: #E8E8E8 #F5F5F5 #F5F5F5 #E8E8E8;
+    box-shadow: -4px 0px 1px #F5F5F5, 0px 5px 1px #F5F5F5; }
   .project .project-detail {
     width: 380px;
-    height: 90px;
-    padding-top: 10px;
-    padding-bottom: 16px; }
-    .project .project-detail a {
-      display: block;
+    height: 64px;
+    margin: 24px 0 32px; }
+    .project .project-detail h4 {
       float: left;
       width: 64px;
       height: 64px;
-      margin-left: -5px; }
+      margin: 0;
+      margin-left: -5px;
+      background-repeat: no-repeat; }
+      .project .project-detail h4 a {
+        display: block;
+        width: 64px;
+        height: 64px;
+        color: #333;
+        font-size: 16px;
+        text-decoration: none;
+        text-align: center;
+        line-height: 64px;
+        background-color: #FFF;
+        opacity: 0;
+        transition: opacity .4s linear; }
+        .project .project-detail h4 a:hover {
+          opacity: .6; }
+    .project .project-detail .diary {
+      background-image: url(../img/diary.png); }
+    .project .project-detail .chat {
+      background-image: url(../img/chat.png); }
+    .project .project-detail .demo {
+      background-image: url(../img/demo.png);
+      margin-bottom: 40px; }
     .project .project-detail p {
       margin-top: 0px;
       margin-left: 64px;
@@ -339,19 +384,37 @@ body {
         text-decoration: none; }
         .project .project-detail p a:hover {
           color: #666; }
-
-.triangle {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 0;
-  height: 0;
-  border: 167px solid;
-  border-color: #FFD646 transparent transparent #FFD646;
-  z-index: 999; }
+  .project #downPdf {
+    display: block;
+    position: relative;
+    width: 150px;
+    height: 50px;
+    margin: 50px auto 0;
+    border: 2px solid #656D78;
+    border-radius: 20px;
+    color: #656D78;
+    font-size: 15px;
+    text-align: center;
+    line-height: 48px;
+    background: transparent;
+    cursor: pointer;
+    transition: all .5s linear; }
+    .project #downPdf:hover {
+      color: #FFF;
+      background: #656D78;
+      transform: scale(1.08); }
+    .project #downPdf .tick {
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 30px;
+      height: 22px;
+      margin-top: -11px;
+      margin-left: -15px;
+      background: url("../img/tick.png") no-repeat center; }
 
 #addWechat {
-  display: none;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -360,8 +423,9 @@ body {
   margin-top: -160px;
   margin-left: -160px;
   opacity: 0;
+  visibility: hidden;
   z-index: 999;
-  transition: opacity 0.6s; }
+  transition: all .4s linear; }
   #addWechat #close {
     display: block;
     position: absolute;
@@ -374,6 +438,6 @@ body {
     background-repeat: no-repeat;
     background-color: rgba(255, 255, 255, 0.9);
     opacity: 0;
-    transition: opacity 0.5s; }
+    transition: opacity .4s linear; }
     #addWechat #close:hover {
       cursor: pointer; }

@@ -1,27 +1,29 @@
 var addWechat = document.getElementById('addWechat');
-var close = document.getElementById('close');
+var wechat = document.getElementById('wechat');
 var downPdf = document.getElementById('downPdf');
 
 
 function showAddWechat(){
-    addWechat.style.display = 'block';
-    setTimeout('addWechat.style.opacity = 1;', 100);
-    document.addEventListener('click', closeAddWechat);
+    addWechat.style.visibility = 'visible';
+    addWechat.style.opacity = 1;
+    setTimeout(function() {
+        wechat.removeEventListener('click', showAddWechat);
+        document.addEventListener('click', closeAddWechat);
+    }, 100);
 }
 
 function closeAddWechat(){
+    addWechat.style.visibility = 'hidden';
     addWechat.style.opacity = 0;
-    setTimeout('addWechat.style.display = "none";', 300);
-    document.removeEventListener('click', closeAddWechat);
+    setTimeout(function() {
+        document.removeEventListener('click', closeAddWechat);
+        wechat.addEventListener('click', showAddWechat);
+    }, 100);
 }
 
-addWechat.onmouseover = function() {
-    close.style.opacity = 1;
-};
 
-addWechat.onmouseout = function() {
-    close.style.opacity = 0;
-};
+wechat.addEventListener('click', showAddWechat);
+
 
 function downLoadPdf() {
     var downUrl = document.createElement("a");
@@ -35,7 +37,7 @@ function downLoadPdf() {
 downPdf.onclick = function() {
     downPdf.style.width = '50px';
     downPdf.style.height = '50px';
-    downPdf.style.background = '#2BCB96';
+    downPdf.style.background = '#656D78';
     downPdf.innerHTML = '<span class="tick"></span>';
     downPdf.style.borderRadius = '50%';
     downPdf.style.marginLeft = '147px';

@@ -10,7 +10,6 @@
     <link rel="stylesheet" type="text/css" href="./css/resume.min.css"/>
 </head>
 <body>
-    <div class="triangle"></div>
     <div class="loading">
         <div class="paper">
             <h1>RESUME</h1>
@@ -20,13 +19,18 @@
             <div class="line"></div>
             <div class="line"></div>
             <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
         </div>
+        <div class="panel"></div>
         <div class="box">
             <div class="circle">
                 <div class="cross-y"></div>
                 <div class="cross-x"></div>
             </div>
         </div>
+        <div class="base"></div>
+        <div class="anchor1"></div><div class="anchor2"></div>
     </div>
     <div class="main">
         <div class="about">
@@ -41,9 +45,7 @@
             <div class="social">
                 <a class="github" href="https://github.com/MinskyNg" target="_blank" title="GitHub"></a>
                 <a class="leetcode" href="https://leetcode.com/minskyng/" target="_blank" title="LeetCode"></a>
-                <a class="wechat" href="javascript:showAddWechat()" title="微信"></a>
-            </div>
-            <div id="downPdf" title="PDF版下载">PDF版下载
+                <a class="wechat" id="wechat" href="javascript:void(0)" title="微信"></a>
             </div>
         </div>
         <div class="skill">
@@ -51,7 +53,7 @@
             <p>HTML/CSS：编写符合W3C标准、语义化的代码，了解HTML5/CSS3部分特性。使用Sass预处理器编写CSS，能实现常用布局和样式。</p>
             <p>JavaScript：熟悉原生JavaScript，理解AJAX工作机制。了解常用ES6语法，以ESlint为检测工具，遵守Airbnb的Style Guide。</p>
             <p>构建工具：NPM / Gulp / Webpack / Babel</p>
-            <p>React相关：Reudx React-Router Ant-Design</p>
+            <p>React相关：Reudx React-router Immutable.js</p>
             <p>测试：Karma+Mocha+Chai+Sinon+Enzyme</p>
             <h3>其他技能：</h3>
             <p>有Git使用经验，用GitHub做代码托管</p>
@@ -61,19 +63,34 @@
         </div>
         <div class="project">
             <h3>练习项目：</h3>
-            <h4><a href="/diary">日记应用</a></h4>
-            <div class="project-detail"><a target="_blank" href="/diary"><img src="img/diary.png" alt="日记应用" /></a><p>用React写的日记应用，使用markdown编辑器。用React写的日记应用，使用markdown编辑器。<a href="">GitHub地址</a></p></div>
-            <h4><a href="/chat">在线聊天室</a></h4>
-            <div class="project-detail"><a target="_blank" href="/chat"><img src="img/chat.png" alt="聊天室" /></a><p>基于socke.io用React写的聊天室，对移动端适配。基于socke.io用React写的聊天室，对移动端适配。<a href="">GitHub地址</a></p></div>
-            <h4><a href="/demo">前端效果</a></h4>
-            <div class="project-detail"><a target="_blank" href="/demo"><img src="img/demo.png" alt="demo" /></a><p>用原生JavaScript或jQuery写的一些效果，部分封装成了插件形式。用原生JavaScript或jQuery写的一些效果。<a href="">GitHub地址</a></p></div>
+            <div class="project-detail">
+                <h4 class="diary"><a target="_blank" href="/diary">日记应用</a></h4>
+                <p>
+                    React编写的日记管理应用，LocalStorage本地存储，支持添加分类、标签，集成MarkDown编辑器。
+                    <a target="_blank" href="https://github.com/MinskyNg/react-diary">GitHub地址</a>
+                </p>
+            </div>
+            <div class="project-detail">
+            <h4 class="chat"><a target="_blank" href="/chat">聊天室</a></h4>
+                <p>
+                    基于socke.io的聊天室，支持用户注册和登陆，建立频道，群聊和私聊，通知等功能，对移动端做了适配。
+                    <a target="_blank" href="https://github.com/MinskyNg/react-chat">GitHub地址</a>
+                </p>
+            </div>
+            <div class="project-detail">
+                <h4 class="demo"><a target="_blank" href="/demo">demo</a></h4>
+                <p>
+                    入门前端时，为练习JavaScript和jQuery写的一些前端效果和工具，较为基础，部分封装成了插件形式。
+                    <a target="_blank" href="https://github.com/MinskyNg/demo">GitHub地址</a>
+                </p>
+            </div>
             <h3>致谢：</h3>
             <p>感谢花时间阅读简历，期待能有机会和您共事。</p>
+            <div id="downPdf" title="PDF版下载">PDF版下载</div>
         </div>
     </div>
     <div id="addWechat">
         <img src="img/addWechat.jpg" alt="微信二维码" />
-        <a id="close"  href="javascript:closeAddWechat()" title="单击关闭"></a>
     </div>
     <script type="text/javascript" src="./js/main.min.js"></script>
 </body>

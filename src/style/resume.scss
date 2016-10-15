@@ -3,19 +3,7 @@
 @import "main";
 
 
-.triangle {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 0;
-    height: 0;
-    border: 167px solid;
-    border-color: #FFD646 transparent transparent #FFD646;
-    z-index: 999;
-}
-
 #addWechat {
-    display: none;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -24,8 +12,9 @@
     margin-top: -160px;
     margin-left: -160px;
     opacity: 0;
+    visibility: hidden;
     z-index: 999;
-    transition: opacity 0.6s;
+    transition: all .4s linear;
     #close {
         display: block;
         position: absolute;
@@ -36,9 +25,9 @@
         border-radius: 50%;
         background-image: url("../img/close.png");
         background-repeat: no-repeat;
-        background-color: rgba(255, 255, 255, 0.9);
+        background-color: rgba(255, 255, 255, .9);
         opacity: 0;
-        transition: opacity 0.5s;
+        transition: opacity .4s linear;
         &:hover {
             cursor: pointer;
         }
