@@ -1,10 +1,11 @@
 @import "global";
 @import "loading";
 @import "main";
+@import "response";
 
 
 #addWechat {
-    position: absolute;
+    position: fixed;
     top: 50%;
     left: 50%;
     width: 320px;
@@ -15,21 +16,4 @@
     visibility: hidden;
     z-index: 999;
     transition: all .4s linear;
-    #close {
-        display: block;
-        position: absolute;
-        top: 5px;
-        left: 5px;
-        width: 20px;
-        height: 20px;
-        border-radius: 50%;
-        background-image: url("../img/close.png");
-        background-repeat: no-repeat;
-        background-color: rgba(255, 255, 255, .9);
-        opacity: 0;
-        transition: opacity .4s linear;
-        &:hover {
-            cursor: pointer;
-        }
-    }
 }

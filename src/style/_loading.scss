@@ -2,6 +2,7 @@
     position:fixed;
     width:100%;
     height:100%;
+    font-size: 100px;
     background: #F5F5F5;
     z-index: 99;
     visibility: visible;
@@ -12,45 +13,47 @@
 
 .paper {
     position: absolute;
-    top: 188px;
+    top: 2em;
     left: 50%;
-    width: 240px;
-    height: 320px;
-    margin-left: -120px;
-    border-radius: 25px;
+    width: 2.4em;
+    height: 3.2em;
+    margin-left: -1.2em;
+    border-radius: .25em;
     background: #FFF;
     z-index: 7;
     animation: showUp 5s linear;
     animation-fill-mode: forwards;
-    h1 {
-        margin-bottom: 16px;
-        text-align: center;
-        letter-spacing: 4px;
-        font-family: cursive;
-        font-size: 36px;
-        color: #222;
-    }
-    .line {
-        height: 11px;
-        width: 210px;
-        margin: 16px auto;
-        background: #D4DAE3;
-        &:last-child {
-            width: 110px;
-            margin: 16px 20px;
-        }
+}
+
+h1 {
+    margin-bottom: .16em;
+    text-align: center;
+    letter-spacing: .16em;
+    font-family: cursive;
+    font-size: .36em;
+    color: #222;
+}
+
+.line {
+    height: .11em;
+    width: 2.1em;
+    margin: .16em auto;
+    background: #D4DAE3;
+    &:last-child {
+        width: 1.1em;
+        margin: .16em .2em;
     }
 }
 
 .panel {
     position: absolute;
-    top: 308px;
+    top: 3.2em;
     left: 50%;
-    width: 270px;
-    height: 62px;
-    margin-left: -135px;
-    border-top-right-radius: 15px;
-    border-top-left-radius: 15px;
+    width: 2.7em;
+    height: .62em;
+    margin-left: -1.35em;
+    border-top-right-radius: .15em;
+    border-top-left-radius: .15em;
     background: #C4CAD3;
     z-index: 8;
     opacity: 1;
@@ -60,12 +63,12 @@
 
 .box {
     position: absolute;
-    top: 366px;
+    top: 3.78em;
     left: 50%;
-    width: 440px;
-    height: 170px;
-    margin-left: -220px;
-    border-radius: 50px;
+    width: 4.4em;
+    height: 1.7em;
+    margin-left: -2.2em;
+    border-radius: .5em;
     background: #959DA8;
     z-index: 29;
     opacity: 1;
@@ -77,10 +80,10 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 88px;
-    height: 88px;
-    margin-top: -44px;
-    margin-left: -44px;
+    width: .88em;
+    height: .88em;
+    margin-top: -.44em;
+    margin-left: -.44em;
     border-radius: 50%;
     background: #FFF;
     opacity: 1;
@@ -92,30 +95,30 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 10px;
-    height: 60px;
-    margin-top: -30px;
-    margin-left: -5px;
-    border-radius: 3px;
+    width: .1em;
+    height: .6em;
+    margin-top: -.3em;
+    margin-left: -.05em;
+    border-radius: .3em;
     background: #656D78;
 }
 
 .cross-x {
-    width: 60px;
-    height: 10px;
-    margin: 40px auto;
-    border-radius: 3px;
+    width: .6em;
+    height: .1em;
+    margin: .4em auto;
+    border-radius: .3em;
     background: #656D78;
 }
 
 .base {
     position: absolute;
-    top: 544px;
+    top: 5.56em;
     left: 50%;
-    width: 370px;
-    height: 24px;
-    margin-left: -185px;
-    border-radius: 16px;
+    width: 3.7em;
+    height: .24em;
+    margin-left: -1.85em;
+    border-radius: .16em;
     background: #757D88;
     z-index: 9;
     opacity: 1;
@@ -125,12 +128,12 @@
 
 .anchor1, .anchor2 {
     position: absolute;
-    top: 564px;
+    top: 5.76em;
     left: 50%;
-    width: 110px;
-    height: 14px;
-    margin-left: -165px;
-    border-radius: 8px;
+    width: 1.1em;
+    height: .14em;
+    margin-left: -1.65em;
+    border-radius: .8em;
     background: #757D88;
     z-index: 9;
     opacity: 1;
@@ -139,43 +142,43 @@
 }
 
 .anchor2 {
-    margin-left: 55px;
+    margin-left: .55em;
 }
 
 
 @keyframes showUp {
     0% {
-        top: 188px;
+        top: 2em;
         transform: scale(1);
     }
 
     12%, 16% {
-        top: 162px;
+        top: 1.74em;
         transform: scale(1);
     }
 
     28%, 32% {
-        top: 124px;
+        top: 1.36em;
         transform: scale(1);
     }
 
     44%, 48% {
-        top: 90px;
+        top: 1.02em;
         transform: scale(1);
     }
 
     60%, 64% {
-        top: 40px;
+        top: .52em;
         transform: scale(1);
     }
 
     80% {
-        top: 70px;
+        top: .62em;
         transform: scale(1);
     }
 
     100% {
-        top: 180px;
+        top: 1.92em;
         transform: scale(1.4);
     }
 }
@@ -214,16 +217,16 @@
 
 @keyframes circleFade {
     0% {
-        width: 440px;
-        margin-left: -220px;
-        border-radius: 50px;
+        width: 4.4em;
+        margin-left: -2.2em;
+        border-radius: .5em;
         opacity: 1;
         transform: scale(1);
     }
 
     40% {
-        width: 170px;
-        margin-left: -85px;
+        width: 1.7em;
+        margin-left: -.85em;
         border-radius: 50%;
         opacity: 1;
         transform: scale(1);
@@ -231,8 +234,8 @@
 
 
     100% {
-        width: 170px;
-        margin-left: -85px;
+        width: 1.7em;
+        margin-left: -.85em;
         border-radius: 50%;
         opacity: 0;
         transform: scale(0);
