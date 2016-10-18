@@ -1,0 +1,16 @@
+#addWechat {
+    position: fixed;
+    top: 240px;
+    left: 50%;
+    width: 320px;
+    height: 320px;
+    margin-left: -160px;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 999;
+    transition: all .4s linear;
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+}

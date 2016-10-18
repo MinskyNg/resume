@@ -2,16 +2,49 @@
     .loading {
         font-size: 90px;
     }
+
+    .left {
+        width: 100%;
+    }
+
+    .right {
+        width: 100%;
+    }
+
+    .avatar {
+        width: 120px;
+        height: 120px;
+    }
+
+    #addWechat {
+        position: fixed;
+        top: 30rem;
+        left: 50%;
+        width: 26rem;
+        height: 26rem;
+        margin-left: -13rem;
+    }
 }
 
 @media screen and (max-width: 568px) {
     .loading {
         font-size: 80px;
     }
+
+    .main {
+        width: 95%;
+        margin: 2rem auto;
+    }
 }
 
 @media screen and (max-width: 420px) {
     .loading {
         font-size: 70px;
+    }
+
+    .main {
+        width: 100%;
+        margin: 0 auto;
+        box-shadow: none;
     }
 }

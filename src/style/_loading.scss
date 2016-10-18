@@ -4,7 +4,6 @@
     height:100%;
     font-size: 100px;
     background: #F5F5F5;
-    z-index: 99;
     visibility: visible;
     opacity: 1;
     animation: fadeOut 1s linear 4.5s;
@@ -255,11 +254,10 @@ h1 {
     from {
         visibility: visible;
         opacity: 1;
-        z-index: 99;
+
     }
     to {
         visibility: hidden;
         opacity: 0;
-        z-index: -1;
     }
 }
