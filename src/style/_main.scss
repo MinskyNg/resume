@@ -28,15 +28,16 @@
     }
     ul {
         list-style-type: disc;
-        margin: 1em 0;
+        margin: 1rem 0;
+        padding-left: 4rem;
     }
     li, p {
         font-size: 1.6rem;
-        font-weight: 500;
-        color: #252D38;
+        font-weight: 400;
+        color: #252D18;
     }
     li {
-        margin: .8em 0;
+        margin: .65em 0;
     }
     p {
         margin: .4em 0;
@@ -74,6 +75,9 @@
         font-size: 2.8rem;
         text-align: center;
     }
+    h3 {
+        margin-top: 3.4em;
+    }
     h4 {
         font-size: 1.8rem;
         text-align: center;
@@ -83,9 +87,9 @@
         width: 12rem;
         height: 4.4rem;
         margin: 6rem auto;
-        border: .2rem solid #656D78;
+        border: .2rem solid #555D68;
         border-radius: 1.6rem;
-        color: #656D78;
+        color: #555D68;
         font-size: 1.5rem;
         font-weight: 500;
         text-align: center;
@@ -96,8 +100,8 @@
         &:hover {
             color: #FFF;
             text-decoration: none;
-            background: #656D78;
-            transform: scale(1.05);
+            background: #555D68;
+            transform: scale(1.08);
         }
     }
 }
@@ -108,6 +112,9 @@
     padding: 0 4%;
     h3 {
         text-align: center;
+        &:first-child {
+            margin-top: .8em;
+        }
     }
     h4 {
         font-size: 1.7rem;

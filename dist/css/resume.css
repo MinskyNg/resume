@@ -5,7 +5,7 @@ html {
   font-size: 62.5%; }
 
 body {
-  font-family: 'Microsoft Yahei', Helvetica, Arial, sans-serif;
+  font-family: -apple-system, "Linux Libertine", "Helvetica Neue", Helvetica, "Nimbus Sans L", Arial, "Liberation Sans", "PingFang SC", "Hiragino Sans GB", "Source Han Sans CN", "Source Han Sans SC", "Microsoft YaHei", "Wenquanyi Micro Hei", "WenQuanYi Zen Hei", "ST Heiti", SimHei, "WenQuanYi Zen Hei Sharp", sans-serif;
   background-color: #F5F5F5; }
 
 .loading {
@@ -246,13 +246,14 @@ h1 {
     border-bottom: 2px solid #555D68; }
   .main ul {
     list-style-type: disc;
-    margin: 1em 0; }
+    margin: 1rem 0;
+    padding-left: 4rem; }
   .main li, .main p {
     font-size: 1.6rem;
-    font-weight: 500;
-    color: #252D38; }
+    font-weight: 400;
+    color: #252D18; }
   .main li {
-    margin: .8em 0; }
+    margin: .65em 0; }
   .main p {
     margin: .4em 0;
     line-height: 1.4em; }
@@ -282,6 +283,8 @@ h1 {
     margin: .4em 0;
     font-size: 2.8rem;
     text-align: center; }
+  .left h3 {
+    margin-top: 3.4em; }
   .left h4 {
     font-size: 1.8rem;
     text-align: center; }
@@ -290,9 +293,9 @@ h1 {
     width: 12rem;
     height: 4.4rem;
     margin: 6rem auto;
-    border: .2rem solid #656D78;
+    border: .2rem solid #555D68;
     border-radius: 1.6rem;
-    color: #656D78;
+    color: #555D68;
     font-size: 1.5rem;
     font-weight: 500;
     text-align: center;
@@ -303,8 +306,8 @@ h1 {
     .left .downPdf:hover {
       color: #FFF;
       text-decoration: none;
-      background: #656D78;
-      transform: scale(1.05); }
+      background: #555D68;
+      transform: scale(1.08); }
 
 .right {
   float: left;
@@ -312,6 +315,8 @@ h1 {
   padding: 0 4%; }
   .right h3 {
     text-align: center; }
+    .right h3:first-child {
+      margin-top: .8em; }
   .right h4 {
     font-size: 1.7rem;
     margin-top: 1em;
@@ -329,7 +334,7 @@ h1 {
 
 #addWechat {
   position: fixed;
-  top: 200px;
+  top: 300px;
   left: 50%;
   width: 320px;
   height: 320px;
@@ -347,8 +352,14 @@ h1 {
     font-size: 90px; }
   .left {
     width: 100%; }
+    .left h3 {
+      margin-top: 2.8em; }
   .right {
     width: 100%; }
+    .right h3 {
+      text-align: left; }
+      .right h3:first-child {
+        margin-top: 2.8em; }
   .avatar {
     width: 120px;
     height: 120px; }
