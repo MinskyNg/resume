@@ -31,17 +31,46 @@ h1 {
     font-family: cursive;
     font-size: .36em;
     color: #222;
+    opacity: 0;
+    animation: headShow .6s linear;
+    animation-fill-mode: forwards;
 }
 
 .line {
     height: .11em;
-    width: 2.1em;
-    margin: .16em auto;
+    width: 0;
+    margin: .16em .15em;
     background: #D4DAE3;
-    &:last-child {
-        width: 1.1em;
-        margin: .16em .2em;
-    }
+    animation: lineFill .8s linear;
+    animation-fill-mode: forwards;
+}
+
+#line1 {
+    animation-delay: .6s;
+}
+
+#line2 {
+    animation-delay: 1.3s;
+}
+
+#line3 {
+    animation-delay: 1.9s;
+}
+
+#line4 {
+    animation-delay: 2.5s;
+}
+
+#line5 {
+    animation-delay: 3.1s;
+}
+
+#line6 {
+    animation-delay: 3.7s;
+}
+
+#line7 {
+    animation-delay: 4.3s;
 }
 
 .panel {
@@ -142,6 +171,28 @@ h1 {
 
 .anchor2 {
     margin-left: .55em;
+}
+
+
+@keyframes headShow {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+@keyframes lineFill {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 2.1em;
+    }
 }
 
 
