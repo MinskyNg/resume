@@ -23,7 +23,7 @@
     h3 {
         font-size: 2rem;
         padding-bottom: .7em;
-        margin-top: 2.8em;
+        margin-top: 3.2em;
         border-bottom: 2px solid #555D68;
     }
     ul {
@@ -76,7 +76,7 @@
         text-align: center;
     }
     h3 {
-        margin-top: 3.4em;
+        margin-top: 3.5em;
     }
     h4 {
         font-size: 1.8rem;
@@ -115,6 +115,9 @@
         &:first-child {
             margin-top: .8em;
         }
+    }
+    strong {
+        font-weight: 500;
     }
     h4 {
         font-size: 1.7rem;

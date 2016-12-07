@@ -277,7 +277,7 @@ h1 {
   .main h3 {
     font-size: 2rem;
     padding-bottom: .7em;
-    margin-top: 2.8em;
+    margin-top: 3.2em;
     border-bottom: 2px solid #555D68; }
   .main ul {
     list-style-type: disc;
@@ -319,7 +319,7 @@ h1 {
     font-size: 2.8rem;
     text-align: center; }
   .left h3 {
-    margin-top: 3.4em; }
+    margin-top: 3.5em; }
   .left h4 {
     font-size: 1.8rem;
     text-align: center; }
@@ -352,6 +352,8 @@ h1 {
     text-align: center; }
     .right h3:first-child {
       margin-top: .8em; }
+  .right strong {
+    font-weight: 500; }
   .right h4 {
     font-size: 1.7rem;
     margin-top: 1em;
@@ -388,13 +390,13 @@ h1 {
   .left {
     width: 100%; }
     .left h3 {
-      margin-top: 2.8em; }
+      margin-top: 3.2em; }
   .right {
     width: 100%; }
     .right h3 {
       text-align: left; }
       .right h3:first-child {
-        margin-top: 2.8em; }
+        margin-top: 3.2em; }
   .avatar {
     width: 120px;
     height: 120px; }

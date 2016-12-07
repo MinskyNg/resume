@@ -1,6 +1,6 @@
 # 个人简历
 
-[Minsky](http://minsky.me)
+[Resume](http://minsky.me/resume)
 
 ## How to start
 
