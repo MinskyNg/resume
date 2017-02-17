@@ -37,7 +37,7 @@ h1 {
   text-align: center;
   letter-spacing: .16em;
   font-family: cursive;
-  font-size: .36em;
+  font-size: .37em;
   color: #222;
   opacity: 0;
   animation: headShow .6s linear;
@@ -290,7 +290,7 @@ h1 {
   .main li {
     margin: .65em 0; }
   .main p {
-    margin: .4em 0;
+    margin: .5em 0;
     line-height: 1.4em; }
   .main a {
     color: #333;
@@ -300,28 +300,18 @@ h1 {
       color: #555D68;
       text-decoration: underline; }
 
-.avatar {
-  width: 140px;
-  height: 140px;
-  margin: 0 auto;
-  border: 2px solid #555D68;
-  border-radius: 50%; }
-  .avatar img {
-    max-width: 100%;
-    height: auto; }
-
 .left {
   float: left;
   width: 40%;
   padding: 0 4%; }
   .left h2 {
-    margin: .4em 0;
-    font-size: 2.8rem;
+    margin: 2.7em 0 1.4em;
+    font-size: 3.4rem;
     text-align: center; }
   .left h3 {
     margin-top: 3.5em; }
   .left h4 {
-    font-size: 1.8rem;
+    font-size: 2rem;
     text-align: center; }
   .left .downPdf {
     display: block;
@@ -358,6 +348,8 @@ h1 {
     font-size: 1.7rem;
     margin-top: 1em;
     margin-bottom: .4em; }
+  .right .js {
+    margin-top: .6em; }
 
 @keyframes fadeIn {
   from {
@@ -413,7 +405,10 @@ h1 {
     font-size: 80px; }
   .main {
     width: 95%;
-    margin: 2rem auto; } }
+    margin: 2rem auto; }
+    .main h2 {
+      margin: 1.8em 0 1em;
+      font-size: 3rem; } }
 
 @media screen and (max-width: 420px) {
   .loading {

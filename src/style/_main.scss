@@ -40,7 +40,7 @@
         margin: .65em 0;
     }
     p {
-        margin: .4em 0;
+        margin: .5em 0;
         line-height: 1.4em;
     }
     a {
@@ -54,32 +54,20 @@
     }
 }
 
-.avatar {
-    width: 140px;
-    height: 140px;
-    margin: 0 auto;
-    border: 2px solid #555D68;
-    border-radius: 50%;
-    img {
-        max-width: 100%;
-        height: auto;
-    }
-}
-
 .left {
     float: left;
     width: 40%;
     padding: 0 4%;
     h2 {
-        margin: .4em 0;
-        font-size: 2.8rem;
+        margin: 2.7em 0 1.4em;
+        font-size: 3.4rem;
         text-align: center;
     }
     h3 {
         margin-top: 3.5em;
     }
     h4 {
-        font-size: 1.8rem;
+        font-size: 2rem;
         text-align: center;
     }
     .downPdf {
@@ -123,6 +111,9 @@
         font-size: 1.7rem;
         margin-top: 1em;
         margin-bottom: .4em;
+    }
+    .js {
+        margin-top: .6em;
     }
 }
 
